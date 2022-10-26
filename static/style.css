@@ -1,0 +1,223 @@
+html {
+    --background: #ffffff;
+    --main: #000000;
+    --alternate: #053D78;
+    --sub: #848484;
+}
+
+@font-face {
+    font-family: "Rockwell";
+    src: url("../assets/rockwell.ttf");
+}
+
+@font-face {
+    font-family: "Avenir Heavy";
+    src: url("../assets/avenirheavy.ttf");
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../assets/poppins.ttf");
+}
+
+@font-face {
+    font-family: "Futura Bold";
+    src: url("../assets/FuturaBold.otf");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--main);
+    background: var(--background);
+    font-family:Poppins, 'Segoe UI', sans-serif;
+    font-size: 14pt;
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+
+.links {
+    display: contents;
+}
+
+.links a {
+    margin-right: 10px;
+}
+
+#canvas-container {
+    position: absolute;
+}
+
+/* Main Content */
+p {
+    font-size: 16pt;
+}
+
+#credits {
+    float: right
+}
+
+ul.striped-list  li {
+    border-bottom: 1px solid rgb(221,221,221);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.striped-list > li:last-child {
+    border-bottom: none;
+}
+
+a {
+    color: var(--alternate);
+    text-decoration: none;
+    /* text-shadow: 0px 0px 10px var(--secondary); */
+    
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: Poppins;
+    font-weight: 200;
+}
+a:hover {
+    color: var(--main);
+    /* text-shadow: 0px 0px 20px var(--text); */
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--alternate);
+    margin: 20px 0;
+    /* box-shadow: 0px 0px 10px var(--secondary); */
+}
+h1 {
+    font-family: "Avenir Heavy";
+    font-weight: lighter;
+    font-size: 40pt;
+    transition: all 0.15s;
+    color: var(--heading);
+}
+
+h3 {
+    color: var(--sub);
+}
+
+/* table stuff */
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+table caption {
+    text-align: left;
+}
+td,
+
+th {
+  padding: 6px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+thead {
+  border-bottom: 1px solid var(--alternate);
+}
+
+tfoot {
+  border-top: 1px solid var(--alternate);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+/* end of table stuff */
+
+
+/*--------------------------------------------------------------
+# Front page specific
+--------------------------------------------------------------*/
+.primary {
+    max-height: 699px;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+}
+
+.front-text{ 
+    background-color: #000000; 
+} 
+
+.front-text h1 {
+    color: #ffffff;
+}
+
+.front-image {
+    width:100%;
+    min-width:400px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+    margin-top: 35px;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-menu li + li {
+    margin-left: 30px;
+  }
+  
+  .nav-menu a {
+    display: block;
+    position: relative;
+    color: var(--secondary);
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+  
+  .nav-menu a:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .nav-menu a:hover:before,
+  .nav-menu li:hover > a:before,
+  .nav-menu .active > a:before {
+    visibility: visible;
+    width: 25px;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu .active > a,
+  .nav-menu li:hover > a {
+    color: var(--special);
+    text-decoration: none;
+  }  
