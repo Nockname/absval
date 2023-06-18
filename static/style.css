@@ -148,6 +148,10 @@ p {
     background-color: #F6F6F6;
 }
 
+.dark-gray-background {
+    background-color: #eeeeee;
+}
+
 .background p, h1 {
     margin: 0; 
     padding: 0.8cm;
