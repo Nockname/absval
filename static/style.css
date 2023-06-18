@@ -37,6 +37,14 @@ html, body {
     scroll-behavior: smooth;
 }
 
+h0 {
+    font-family: "LeagueSpartan";
+    font-weight: lighter;
+    font-size: 45pt;
+    transition: all 0.15s;
+    letter-spacing: .1rem;
+}
+
 h1 {
     font-family: "LeagueSpartan";
     font-weight: lighter;
@@ -48,14 +56,14 @@ h1 {
 h2 {
     font-family: "LeagueSpartan";
     font-weight: lighter;
-    font-size: 20pt;
+    font-size: 25pt;
     transition: all 0.15s;
     letter-spacing: .1rem;
 }
 
 h3 {
     font-family: "Cabin";
-    font-size: 30pt;
+    font-size: 20pt;
     transition: all 0.15s;
     font-weight: lighter;
     letter-spacing: .1rem;
@@ -81,8 +89,9 @@ h6 {
 }
 
 button {
-    width: 30%;
+    /* width: 30%; */
     max-width: 200px;
+    min-width: 200px;
     background-color: var(--alternate); /* Green */
     border: none;
     color: white;
@@ -102,8 +111,9 @@ button:focus-visible {
 
 p {
     font-weight: lighter;
-    font-size: 12pt;
+    font-size: 14pt;
     color: #5E5E5E;
+    line-height: 1.5;
 }
 
 .black {
@@ -228,6 +238,18 @@ a:hover {
     color: var(--alternate);
 }
 
+@media screen and (max-width: 520px) {
+    #bars {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 520px) {
+    #nobars {
+      display: none;
+    }
+  }
+
 /* Primary */
 .primary {
     height: 100%;
@@ -237,7 +259,7 @@ a:hover {
     
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .primary {
         height: 100%;
         justify-content: center;
@@ -284,17 +306,135 @@ a:hover {
     display: block;
 }
 
+/* Info */
+
 .info {
+    height: 100%;
+    justify-content: center;
+    align-items: top;
+    position: relative; 
+    margin: 100px;
+    
+    /* grid-template-columns: 0% 5% 30% 30% 30% 5%;  */
+}
+
+@media only screen and (min-width: 1000px) {
+    .info {
+        display: grid; 
+        grid-template-columns: 30% 40% 30%; 
+    }
+}
+
+/* Map */
+
+.mapmain {
     height: 100%;
     justify-content: center;
     align-items: center;
     position: relative; 
-    display: grid; 
-    grid-template-columns: 20% 20% 20% 20% 20%; 
+    
 }
 
-.map {
-    width: 70%;
-    height: 100vh;
-    min-height:500px;
+@media only screen and (min-width: 1000px) {
+    .mapmain {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        display: grid; 
+        grid-template-columns: 27% 73%; 
+    }
+}
+
+/* Slider */
+
+.newsplide {
+    height: 35vh;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  
+  max-height: 70vh;
+  
+  object-fit: cover;
+}
+
+.new_splide__slide img {
+  /* width: 70%;*/
+  height: 25vw;
+
+  max-height: 30vh;
+  
+  width: auto;
+  
+  max-width: 100%;
+  
+  object-fit: cover;
+}
+
+/* Bottom options */
+
+#bottom a {
+    color: var(--background);
+}
+
+
+/*--------------------------------------------------------------
+# About us specific
+--------------------------------------------------------------*/
+
+.middle50 {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+@media only screen and (min-width: 600px) {
+    .middle50 {
+        display: grid; 
+        grid-template-columns: 25% 50% 25%; 
+    }
+}
+
+.evensplit {
+    height: 100%;
+    justify-content: center;
+    position: relative; 
+}
+
+.evensplit p {
+    margin: 10px;
+}
+
+.notshared {
+    align-items: center;
+}
+
+.shared {
+    align-items: top;
+}
+
+@media only screen and (min-width: 920px) {
+    .evensplit {
+        display: grid; 
+        grid-template-columns: 6% 42% 4% 42% 6%; 
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+#chpt-pres img {
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;   
+    border-radius: 25%;
+   
 }
