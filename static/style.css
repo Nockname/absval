@@ -35,6 +35,7 @@ html, body {
     font-family: "Cabin";
     font-size: 14pt;
     scroll-behavior: smooth;
+    Overflow-x: hidden;
 }
 
 h0 {
